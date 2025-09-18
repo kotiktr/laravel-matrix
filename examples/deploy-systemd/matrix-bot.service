@@ -1,0 +1,16 @@
+[Unit]
+Description=Standalone Matrix Bot (FN project)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/matrix.example.com/html/laravel-flight-management
+ExecStart=/usr/local/bin/run_matrix_bot.sh
+Restart=on-failure
+RestartSec=5
+Environment=PATH=/usr/bin:/usr/local/bin
+
+[Install]
+WantedBy=multi-user.target

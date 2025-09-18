@@ -1,0 +1,31 @@
+{
+    "name": "kotiktr/laravel-matrix",
+    "description": "Laravel integration package for Matrix chat (bot + notification channel).",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kotiktr",
+            "email": "github32875@r.kotik.tr"
+        }
+    ],
+    "require": {
+        "php": "^8.1 || ^8.2",
+        "illuminate/support": "^10 || ^11 || ^12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kotiktr\\LaravelMatrix\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kotiktr\\LaravelMatrix\\MatrixServiceProvider"
+            ],
+            "aliases": {
+                "MatrixBot": "Kotiktr\\LaravelMatrix\\Facades\\MatrixBot"
+            }
+        }
+    }
+}
